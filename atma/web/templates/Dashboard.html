@@ -28,17 +28,20 @@
 			</nav>
 		<!---->		
 	<div class="container push-down">
+
 		<div class="row">
 		      <div class="col s4 center-align"><span class="flow-text">Priority</span></div>
 		      <div class="col s4 center-align"><span class="flow-text">Strategy</span></div>
 		      <div class="col s4 center-align"><span class="flow-text">Year</span></div>
 		</div>
 		<div class="row">
+			{% for Priorities in Priority_Areas_Object %}
 			<div class="col s4 center-align" style="margin: 1% 0;"><a class="waves-effect waves-light btn grey">Priority 1</a></div>
 			<div class="col s4 center-align">
 				<ul class="collapsible popout" data-collapsible="accordion">
+						
 				    <li>
-				      	<div class="collapsible-header grey white">STRATEGY</div>
+				      	<div class="collapsible-header grey white">		</div>
 				      	<div class="collapsible-body"><p class="pad-1">Strategy 1</p>
 				      		<div class="progress">
 							      <div class="determinate yellow" style="width: 50%"></div>

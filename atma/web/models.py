@@ -32,20 +32,28 @@ class AtmaUserInfo(models.Model):
 
 class NGO(models.Model):
 
-    description = models.TextField()
+    name=models.TextField()
+    sdescription = models.TextField()
     partnership_manager = models.ForeignKey(User,
                                             related_name='managers')
     resources = models.TextField()
     status = models.CharField(max_length=2, choices=STATUSES)
 
+class Priority_Areas(models.Model):
+    NGO_name=models.TextField()
+    priority_area = models.CharField(max_length=20, choices=PRIORITY_AREAS)
+
 
 class Strategy(models.Model):
 
+    NGO_name=models.TextField()
+    priority_name=models.TextField()
+    strategy_name=models.TextField()
     description = models.TextField()
     ngo = models.ForeignKey(NGO)
     year = models.IntegerField()
     status = models.CharField(max_length=2, choices=STATUSES)
-    priority_area = models.CharField(max_length=2, choices=PRIORITY_AREAS)
+
     date_created = models.DateField(auto_now_add=True)
     deadline = models.DateField(auto_now_add=True)
 
@@ -62,7 +70,7 @@ class Strategy(models.Model):
 
 
 class Project(models.Model):
-
+    NGO_name=models.TextField()
     description = models.TextField()
     strategy = models.ForeignKey(Strategy)
     quarter = models.IntegerField()

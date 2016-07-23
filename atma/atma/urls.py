@@ -22,7 +22,7 @@ from . import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^Dashboard/', Dashboard),
+    url(r'^Dashboard/(?P<NGO_selected>[a-zA-z&.0-9 ]+)/$', Dashboard),
     url(r'^login/', login),
     url(r'^index/', index),
     url(r'^AIP/',AIP),	
