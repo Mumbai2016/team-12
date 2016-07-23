@@ -18,7 +18,7 @@
     border-bottom: none;
 }
 .brand-logo{
-    background-image: url("../static/images/logo.png") !important;
+    background-image: url("images/logo.png") !important;
     width: 10%;
     height: 63px;
     background-size: cover;
@@ -138,12 +138,4 @@
     padding: 5% !important;
     margin: 3% 3%;
     width: 30% !important;
-}
-.index-img{
-    display: inline-block;
-    width: 24%;
-    margin-top: 5%;
-}
-.index-img img{
-    width: 100%;
 }
