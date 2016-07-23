@@ -3,7 +3,6 @@ from __future__ import unicode_literals
 from django.db import models
 from django.contrib.auth.models import User
 
-
 STATUSES = (
     ('NS', 'Not started'),
     ('ON', 'Ongoing'),
@@ -21,20 +20,21 @@ PRIORITY_AREAS = (
 )
 
 
-class PartnershipManager(User):
+class AtmaUserInfo(models.Model):
 
-    points = models.IntegerField()
-
-
-class Volunteer(User):
-
-    points = models.IntegerField()
+    user = models.OneToOneField(User)
+    user_type = models.CharField(max_length=1,
+                                 choices=(('V', 'Volunteers'),
+                                          ('P', 'Project manager')))
+    last_checked_in_time = models.DateField()
+    streak = models.IntegerField()
 
 
 class NGO(models.Model):
 
     description = models.TextField()
-    partnership_manager = models.ForeignKey(PartnershipManager)
+    partnership_manager = models.ForeignKey(User,
+                                            related_name='managers')
     resources = models.TextField()
     status = models.CharField(max_length=2, choices=STATUSES)
 
@@ -69,7 +69,7 @@ class Project(models.Model):
     date_created = models.DateField(auto_now_add=True)
     deadline = models.DateField()
     status = models.CharField(max_length=2, choices=STATUSES)
-    assignee = models.OneToOneField(Volunteer)
+    assignee = models.OneToOneField(User, related_name='assignee')
 
     def tasks_completed(self):
         # returns a tuple (completed, total)
