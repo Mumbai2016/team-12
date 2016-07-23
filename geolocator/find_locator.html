@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <style>
       html, body {
-        height: 90%;
+        height: 100%;
         margin: 0;
         padding: 0;
       }
@@ -16,6 +16,26 @@
     </style>
   </head>
   <body>
+
+    <form action="demo_form.asp" id="hours">
+      <table>
+      <tr>
+        <td>Username:</td>
+        <td> <input type="text" name="fname"><br></td>
+      </tr>
+    <tr>
+      <td>Number of Hours invested:</td>
+
+      <td><input type="text" name="lname"><br></td>
+
+    </tr>
+    <tr>
+      <td><td>
+    <td><input type="submit" value="Submit"><td>
+    </tr>
+
+    </table>
+  </form>
     <div id="map"></div>
     <script>
 
@@ -39,7 +59,8 @@
             title: 'Hello World!'
             });
             infoWindow.setPosition(pos);
-            infoWindow.setContent('username'); //TODO: after integration
+            infoWindow.setContent('username');
+            infoWindow.setContent(hours); //TODO: after integration
             map.setCenter(pos);
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
