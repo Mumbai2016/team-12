@@ -34,10 +34,7 @@ class Volunteer(User):
 class NGO(models.Model):
 
     description = models.TextField()
-    partnership_manager = models.OneToOneField(
-        PartnershipManager,
-        related_name='partnership_manager'
-    )
+    partnership_manager = models.ForeignKey(PartnershipManager)
     resources = models.TextField()
     status = models.CharField(max_length=2, choices=STATUSES)
 
@@ -52,6 +49,17 @@ class Strategy(models.Model):
     date_created = models.DateField(auto_now_add=True)
     deadline = models.DateField(auto_now_add=True)
 
+    def tasks_completed(self):
+        # returns a tuple (completed, total)
+        n_total = 0
+        n_completed = 0
+        for project in self.project_set.all():
+            total = [len(x) for x in project.task_set.all()]
+            n_total = n_total + total
+            completed = filter(total, lambda x: x == 'CO')
+            n_completed = n_completed + completed
+        return (n_completed, n_total)
+
 
 class Project(models.Model):
 
@@ -62,6 +70,12 @@ class Project(models.Model):
     deadline = models.DateField()
     status = models.CharField(max_length=2, choices=STATUSES)
     assignee = models.OneToOneField(Volunteer)
+
+    def tasks_completed(self):
+        # returns a tuple (completed, total)
+        n_total = [len(x) for x in self.task_set.all()]
+        n_completed = filter(n_total, lambda x: x == 'CO')
+        return (n_completed, n_total)
 
 
 class Task(models.Model):
@@ -77,3 +91,12 @@ class Badges(models.Model):
 
     name = models.TextField()
     image_name = models.TextField()
+    badge_type = models.CharField(max_length=1,
+                                  choices=(('V', 'Volunteer'),
+                                           ('P', 'Partnership manager')))
+
+
+class OfficeLocation(models.Model):
+
+    lat = models.FloatField()
+    lng = models.FloatField()
