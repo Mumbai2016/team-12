@@ -36,13 +36,14 @@
 		</div>
 		<div class="row">
 			{% for Priorities in Priority_Areas_Object %}
-			<div class="col s4 center-align" style="margin: 1% 0;"><a class="waves-effect waves-light btn grey">Priority 1</a></div>
+			<div class="col s4 center-align" style="margin: 1% 0;"><a class="waves-effect waves-light btn grey">{{Priorities.priority_area}}</a></div>
 			<div class="col s4 center-align">
 				<ul class="collapsible popout" data-collapsible="accordion">
 						
 				    <li>
+				    	{% for Strategies in Strategy_Object %}
 				      	<div class="collapsible-header grey white">		</div>
-				      	<div class="collapsible-body"><p class="pad-1">Strategy 1</p>
+				      	<div class="collapsible-body"><p class="pad-1">{{Priorities.priority_area}}</p>
 				      		<div class="progress">
 							      <div class="determinate yellow" style="width: 50%"></div>
 							</div>
