@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="bootstrap.js"></script>
+<script src="bootstrap_jquery.js"></script>
+<link rel="stylesheet" href="bootstrap.css">
+<title>ATMA - An accelerator for education NGO's</title>
+
+<style>
+.img{
+	margin: 7.5%;
+
+}
+
+
+
+.page-header{
+	background:  #d6d6c2;
+	padding: 3%;
+	border-radius: 15px;
+
+}
+
+.add-ngo{
+	cursor: pointer;
+	position: fixed;
+	bottom: 10px; 
+	left: 10px; 
+}
+
+.delete-ngo{
+	cursor: pointer;
+    position: fixed;
+	bottom: 10px; 
+	right: 5px;
+}
+
+.page-header{
+	margin-bottom: 2%;
+}
+
+.hovereffect img {
+cursor: pointer;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+.hovereffect:hover img {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /><feGaussianBlur stdDeviation="3" /></filter></svg>#filter');
+  filter: grayscale(1) blur(3px);
+  -webkit-filter: grayscale(1) blur(3px);
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.row{
+	margin-left: 5%;
+}
+
+.rock{
+	font-size: 20px;
+	margin-left: -3%;
+}
+
+</style>
+</head>
+
+<body>
+<!--
+<img src="logo.png" alt="log">
+	-->	
+	<div class="container-fluid">
+		<div class="page-header">
+			<h1> PM NAME</h1>
+			</div>
+
+		<div class="row">
+		<div class="hovereffect col-xs-6"><a href=" " target="_blank"><img src="log-1.jpg" alt="log"  class="img-circle img img-responsive" width ="350" height="300"></a></div>
+		<div class="hovereffect col-xs-6"><a href=" " target="_blank"><img src="logo-2.jpg" alt="log" class="img-circle img img-responsive" width ="350" height="300"></a></div>
+		</div>
+
+		<div class="row">
+				<p class="col-xs-6 rock" style="text-align:center ;text-decoration : underline ;font-weight :bold">NGO-1</p>
+				<p class="col-xs-6 rock" style="text-align:center ;text-decoration : underline ;font-weight :bold">NGO-2</p>
+		</div>
+		
+		<div class="row">
+		<div class="hovereffect col-xs-6"><a href=" " target="_blank"><img src="logo-3.gif" alt="log" class="img-circle img img-responsive" width ="350" height="300"></a></div>
+		<div class="hovereffect col-xs-6"><a href=" " target="_blank"><img src="logo-4.jpg" alt="log" class="img-circle img img-responsive" width ="350" height="300"></a></div>
+		</div>
+
+		<div class="row">
+				<p class="col-xs-6 rock" style="text-align:center ;text-decoration : underline; font-weight :bold">NGO-3</p>
+				<p class="col-xs-6 rock" style="text-align:center ;text-decoration : underline; font-weight :bold">NGO-4</p>
+		</div>
+		<div class="row">
+		<a href="#" class="btn btn-info btn-lg add-ngo">
+          <span class="glyphicon glyphicon-plus"></span> ADD NGO
+        </a>
+        <a href="#" class="btn btn-info btn-lg delete-ngo">
+          <span class="glyphicon glyphicon-minus"></span> DELETE NGO
+        </a>
+    </div>
+
+	</div>
+	</body>
+
+
+
+</html>
