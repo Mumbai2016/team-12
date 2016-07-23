@@ -1,0 +1,110 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  	<style type="text/css">
+  		.pg-3-nav{
+			height: 50px;
+		    background: grey;
+		    font-size: large ;
+		    padding: 1% 0px;
+		    color: #fff;
+		}
+  		.prio-area{
+			padding: 1% 0px !important;
+		    background-color: rgba(218, 214, 214, 0.21) !important;
+		    margin-bottom: 1%;
+		}
+		.pad-left{
+			padding-left: 3.5% !important;
+		}
+		a{
+			color: antiquewhite !important;
+		}
+  	</style>
+	</head>
+	<body>
+		<!-- include header.html -->
+			<nav class="navbar navbar-light bg-faded" style="background: #424040;">
+			  <a class="navbar-brand" href="#">ATMA</a>
+			  <ul class="nav navbar-nav">
+			    <li class="nav-item active">
+			      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link" href="#">Features</a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link" href="#">Pricing</a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link" href="#">About</a>
+			    </li>
+			  </ul>
+			</nav>
+		<!---->		
+	<div class="container">
+		<div class="row pg-3-nav">
+			<div class="col-md-4"><span class="pad-left"><b>Priority</b></span>
+			</div>
+			<div class="col-md-4"><span class="pad-left"><b>Strategy</b></span>
+			</div>
+			<div class="col-md-4"><span class="pad-left"><b>Year</b></span>
+			</div>
+		</div>
+		<div class="row prio-area">
+  			<div class="col-md-4">
+  				<button type="button" class="btn btn-default" aria-label="Left Align">
+				  Priority 1
+				</button>
+  			</div>
+			  <div class="col-md-4">
+			  	<button data-toggle="collapse" class="btn btn-default" data-target="#p1">Strategy 1</button>
+					<div id="p1" class="collapse">
+					S1<br>
+					S2<br>
+					S3<br>
+					S4<br>
+					S5<br>
+					</div>
+			  </div>
+			  <div class="col-md-4">
+			  		1<br>
+			  		2<br>
+			  		3<br>
+			  </div>
+		</div>
+		<div class="row prio-area">
+  			<div class="col-md-4">
+  				<button type="button" class="btn btn-default" aria-label="Left Align">
+				  Priority 2
+				</button>
+  			</div>
+			  <div class="col-md-4">
+			  	<button data-toggle="collapse" class="btn btn-default" data-target="#p2">Strategy 2</button>
+					<div id="p2" class="collapse">
+					S1<br>
+					S2<br>
+					S3<br>
+					S4<br>
+					</div>
+			  </div>
+			  <div class="col-md-4">
+			  		1<br>
+			  		2<br>
+			  		3<br>
+			  </div>
+		</div>
+	</div>
+	</body>
+</html>
