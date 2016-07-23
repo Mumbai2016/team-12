@@ -1,6 +1,0 @@
-<html>
-<body>
-Hello yo
-vdenash  was here
-</body>
-</html>
