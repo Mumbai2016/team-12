@@ -16,6 +16,9 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from web.views import AIP,QP,Dashboard,login,index
+from django.conf.urls.static import static
+
+from . import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -24,4 +27,4 @@ urlpatterns = [
     url(r'^index/', index),
     url(r'^AIP/',AIP),	
     url(r'^QP/',QP)
-]
+ ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

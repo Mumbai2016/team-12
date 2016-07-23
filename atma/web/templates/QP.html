@@ -1,46 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-</head>
-<body>
+<!DOCTYPE>
+<html>
+  <head>
+    <!-- Latest compiled and minified CSS -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../static/materialize/css/materialize.min.css"  media="screen,projection"/>
 
-<div class="container">
-  <h2>Quarterly Plan</h2>
-  
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Organisation</th>
-        <th>PM</th>
-        <th>Project</th>
-		<th>Start Date</th>
-		<th>Completion Date</th>
-		<th>Volunteer Required</th>
-		<th>Volunteer Name</th>
-		<th>Volunteer Name</th>
-		<th>Project Status</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td> </td>
-        <td> </td>
-		<td> </td>
-		<td> </td>
-		<td> </td>
-		<td> </td>
-		<td> </td>
-		<td> </td>
-      </tr>
+    <link type="text/css" rel="stylesheet" href="../static/atma.css" />
+        <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    </tbody>
-  </table>
+      <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../static/materialize/js/materialize.min.js"></script>
+  </head>
+  <body>
+    <!-- include header.html -->
+      <nav class="blue-black darken-4">
+          <div class="nav-wrapper wd75 margin-center">
+          <a href="./" class="brand-logo green-text light-1"></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="index.php" class="green-text light-1 hover-white">Home</a></li>
+              <li><a href="#" class="green-text light-1 hover-white">About</a></li>
+              <li><a href="editor.php" class="green-text light-1 hover-white">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    <!---->   
+  <div class="container push-down">
+    <div class="row">
+      <h4>Quarterly Plan</h4>
+    </div>
+    <table>
+        <thead>
+          <tr>
+              <th data-field="id">Organisation</th>
+              <th data-field="id">PM</th>
+              <th data-field="id">Project</th>
+              <th data-field="id">Start Date</th>
+              <th data-field="id">Completion Date</th>
+              <th data-field="id">Volunteer Required</th>
+              <th data-field="id">Volunteer Name</th>
+              <th data-field="id">Project Status</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Alvin</td>
+            <td>Eclair</td>
+            <td>$0.87</td>
+          </tr>
+        </tbody>
+    </table>
 </div>
 
 </body>
