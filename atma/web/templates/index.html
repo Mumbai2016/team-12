@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	{% load staticfiles %}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="bootstrap.js"></script>
-<script src="bootstrap_jquery.js"></script>
-<link rel="stylesheet" href="bootstrap.css">
+<script src="{% static 'bootstrap.js'%}"></script>
+<script src="{% static 'bootstrap_jquery.js'%}"></script>
+<link rel="stylesheet" href="{% static 'bootstrap.css'%}">
 <title>ATMA - An accelerator for education NGO's</title>
 
 <style>
@@ -74,11 +75,11 @@ cursor: pointer;
 	-->	
 	<div class="container-fluid">
 		<div class="page-header">
-			<h1> PM NAME</h1>
+			<h1>PARTNERSHIP MEMBER NAME</h1>
 			</div>
 
 		<div class="row">
-		<div class="hovereffect col-xs-6"><a href=" " target="_blank"><img src="log-1.jpg" alt="log"  class="img-circle img img-responsive" width ="350" height="300"></a></div>
+		<div class="hovereffect col-xs-6"><a href="/Dashboard/1/" target="_blank"><img src="{% static 'images/log-1.jpg' %}" alt="log" class="img-circle img img-responsive" width ="350" height="300"></a></div>
 		<div class="hovereffect col-xs-6"><a href=" " target="_blank"><img src="logo-2.jpg" alt="log" class="img-circle img img-responsive" width ="350" height="300"></a></div>
 		</div>
 
