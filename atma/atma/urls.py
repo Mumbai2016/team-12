@@ -15,9 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from web.views import AIP
+from web.views import AIP,QP,Dashboard,login,index
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^AIP/',AIP)
+    url(r'^Dashboard/', Dashboard),
+    url(r'^login/', login),
+    url(r'^index/', index),
+    url(r'^AIP/',AIP),	
+    url(r'^QP/',QP)
 ]
