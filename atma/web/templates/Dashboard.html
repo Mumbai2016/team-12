@@ -1,13 +1,6 @@
 <!DOCTYPE>
 <html>
-// <!--script type="text/javascript">
-// $(document).ready(function(){
-// 	$('on1').click(function(){
-// 			window.href.location="/Populate_Projects/"
-// 			document.getElementById('p-pad').innerHTML={{Project.project_name}};
-// 	});
-// });
-</script-->
+	
 	<head>
 		<!-- Latest compiled and minified CSS -->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -25,11 +18,11 @@
 	<body>
 		<div class="w3-content w3-container" style="margin-top:1%">
   <div>
-<<<<<<< HEAD
+
   <center> <img src="/media/logo.png"  alt=" " style="height=20px" > </center>
-=======
+
   <center> <img src="logo.png"  alt=" " style="height=20px" > </center>
->>>>>>> 77b12f90c6c0d9c7a66d537867d18054ae0988cc
+
  </div>	
 	<div class="container push-down">
 		<div class="row">
@@ -37,13 +30,13 @@
 		      <div class="col s4 center-align"><span class="flow-text">Strategy</span></div>
 		      
 			  <div class="col s4 center-align">
-				<div class="col s4 center-align "><span class="flow-text">Year 1</span></div>
-				<div class="col s4 center-align "><span class="flow-text">Year 2</span></div>
-				<div class="col s4 center-align"><span class="flow-text">Year 3</span></div>
+				<a href="/AIP/1/"><div class="col s4 center-align "><span class="flow-text">Year 1</span></div></a>
+				<a href="/AIP/2/"><div class="col s4 center-align "><span class="flow-text">Year 2</span></div></a>
+				<a href="/AIP/3/"><div class="col s4 center-align"><span class="flow-text">Year 3</span></div></a>
 			</div>
 			  
 		</div>
-<<<<<<< HEAD
+
 		<!-- <div class="row">
 =======
 		<div class="row">
@@ -84,23 +77,23 @@
 				<ul class="collapsible popout" data-collapsible="accordion">
 					{% for Strategies in Strategy_Object %}	
 				    <li>
-<<<<<<< HEAD
+
 				      	<div class="collapsible-header grey white on1">{{Strategies.strategy_name}}</div>
 				      		
 				      	{% for Project in Project_Object %}
 				      	<div class="collapsible-body"><p class="pad-1" id="p-pad">{{Project.project_name }}</p>
-=======
+
 				      	<div class="collapsible-header grey white">STRATEGY</div>
 				      	<div class="collapsible-body"><p class="pad-1">Project 1</p>
->>>>>>> 77b12f90c6c0d9c7a66d537867d18054ae0988cc
+
 				      		<div class="progress">
 							      <div class="determinate" style="width: 70%"></div>
 							</div>
 						</div>
-<<<<<<< HEAD
+
 				      	{% endfor %}
 				      	
-=======
+
 				      	<div class="collapsible-body"><p class="pad-1">Project 2</p>
 				      		<div class="progress">
 							      <div class="determinate red" style="width: 20%"></div>
@@ -111,7 +104,7 @@
 							      <div class="determinate yellow" style="width: 50%"></div>
 							</div>
 				      	</div>
->>>>>>> 77b12f90c6c0d9c7a66d537867d18054ae0988cc
+
 				    </li>
 				    {% endfor %}
 				</ul>

@@ -23,8 +23,8 @@ from . import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^Dashboard/(?P<NGO_selected>[a-zA-z&.0-9 ]+)/$', Dashboard),
-    url(r'^login/', login),
+    url(r'^login/(?P<year_selected>[0-9 ]+)/$', AIP),
     url(r'^index/', index),
-    url(r'^AIP/',AIP),	
+    url(r'^AIP/(?P<year>[0-9])/$',AIP),	
     url(r'^QP/',QP)
  ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

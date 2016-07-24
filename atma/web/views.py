@@ -7,8 +7,12 @@ from .models import NGO,Strategy,Project,Priority_Areas
 def index(request):	
 	return render_to_response('index.html')
 
-def AIP(request):
-	return render_to_response('AIP.html')
+def AIP(request, year=""):
+	AIP_Details=Project.objects.filter(strategy__year=year).values()
+	for project in AIP_Details:
+		import pdb; pdb.set_trace()
+		project['quarters'] = list(map(lambda x: "Yes" if x else "", [ project['quarter'] - 1 == x for x in range(4) ]))
+	return render_to_response('AIP.html',{'AIP':AIP_Details},context_instance=RequestContext(request))
 
 def QP(request):
 	return render_to_response('QP.html')

@@ -68,14 +68,16 @@ class Strategy(models.Model):
 
 
 class Project(models.Model):
+
     NGO_name=models.TextField()
     project_name = models.TextField()
-    strategy = models.TextField()
+    strategy = models.ForeignKey(Strategy)
     quarter = models.IntegerField()
     date_created = models.DateField(auto_now_add=True)
     deadline = models.DateField()
     status = models.CharField(max_length=2, choices=STATUSES)
     assignee = models.OneToOneField(User, related_name='assignee')
+    resources = models.TextField()
 
     def tasks_completed(self):
         # returns a tuple (completed, total)

@@ -53,7 +53,6 @@
           </tr>
         </thead>
 
-<<<<<<< HEAD
         <tbody>
            {% for AIP_Details in AIP %}
           <tr>
@@ -61,24 +60,13 @@
             <td>{{AIP_Details.priority_area}}</td>
             <td>{{AIP_Details.strategy_name}}</td>
             <td>{{AIP_Details.project_name}}</td>
+            <td>{{AIP_Details.quarters.0}}</td>
+            <td>{{AIP_Details.quarters.1}}</td>
+            <td>{{AIP_Details.quarters.2}}</td>
+            <td>{{AIP_Details.quarters.3}}</td>
             <td>{{AIP_Details.resources}}</td>
             <td>{{AIP_Details.person_responsible}}</td>
             <td>{{AIP_Details.status}}</td>
-        
-=======
-        <tbody id="tbodyid">
-          <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
-            <td>$0.87</td>
->>>>>>> 77b12f90c6c0d9c7a66d537867d18054ae0988cc
           </tr>
               {% endfor %}
         </tbody>
