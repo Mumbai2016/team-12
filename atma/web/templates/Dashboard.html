@@ -1,59 +1,61 @@
 <!DOCTYPE>
 <html>
+// <!--script type="text/javascript">
+// $(document).ready(function(){
+// 	$('on1').click(function(){
+// 			window.href.location="/Populate_Projects/"
+// 			document.getElementById('p-pad').innerHTML={{Project.project_name}};
+// 	});
+// });
+</script-->
 	<head>
 		<!-- Latest compiled and minified CSS -->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="../static/materialize/css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../../static/materialize/css/materialize.min.css"  media="screen,projection"/>
 
-    <link type="text/css" rel="stylesheet" href="../static/atma.css" />
+    <link type="text/css" rel="stylesheet" href="../../static/atma.css" />
         <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
       <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="../static/materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../static/materialize/js/materialize.min.js"></script>
 	</head>
 	<body>
-		<!-- include header.html -->
-			<nav class="blue-black darken-4">
-			    <div class="nav-wrapper wd75 margin-center">
-					<a href="./" class="brand-logo green-text light-1"></a>
-					<ul id="nav-mobile" class="right hide-on-med-and-down">
-					    <li><a href="index.php" class="green-text light-1 hover-white">Home</a></li>
-					    <li><a href="#" class="green-text light-1 hover-white">About</a></li>
-					    <li><a href="editor.php" class="green-text light-1 hover-white">Contact</a></li>
-					</ul>
-				</div>
-			</nav>
-		<!---->		
+		<div class="w3-content w3-container" style="margin-top:1%">
+  <div>
+  <center> <img src="/media/logo.png"  alt=" " style="height=20px" > </center>
+ </div>	
 	<div class="container push-down">
-
 		<div class="row">
 		      <div class="col s4 center-align"><span class="flow-text">Priority</span></div>
 		      <div class="col s4 center-align"><span class="flow-text">Strategy</span></div>
-		      <div class="col s4 center-align"><span class="flow-text">Year</span></div>
+		      
+			  <div class="col s4 center-align">
+				<div class="col s4 center-align "><span class="flow-text">Year 1</span></div>
+				<div class="col s4 center-align "><span class="flow-text">Year 2</span></div>
+				<div class="col s4 center-align"><span class="flow-text">Year 3</span></div>
+			</div>
+			  
 		</div>
-		<div class="row">
-			{% for Priorities in Priority_Areas_Object %}
-			<div class="col s4 center-align" style="margin: 1% 0;"><a class="waves-effect waves-light btn grey">{{Priorities.priority_area}}</a></div>
+		<!-- <div class="row">
+			<div class="col s4 center-align" style="margin: 1% 0;"><a class="waves-effect waves-light btn grey">Priority 1</a></div>
 			<div class="col s4 center-align">
 				<ul class="collapsible popout" data-collapsible="accordion">
-						
 				    <li>
-				    	{% for Strategies in Strategy_Object %}
-				      	<div class="collapsible-header grey white">		</div>
-				      	<div class="collapsible-body"><p class="pad-1">{{Priorities.priority_area}}</p>
+				      	<div class="collapsible-header grey white">STRATEGY</div>
+				      	<div class="collapsible-body"><p class="pad-1">Project 1</p>
 				      		<div class="progress">
 							      <div class="determinate yellow" style="width: 50%"></div>
 							</div>
 				      	</div>
-				      	<div class="collapsible-body"><p class="pad-1">Strategy 2</p>
+				      	<div class="collapsible-body"><p class="pad-1">Project 2</p>
 				      		<div class="progress">
 							      <div class="determinate" style="width: 80%"></div>
 							</div>
 				      	</div>
-				      	<div class="collapsible-body"><p class="pad-1">Strategy 3</p>
+				      	<div class="collapsible-body"><p class="pad-1">Project 3</p>
 				      		<div class="progress">
 							      <div class="determinate red" style="width: 10%"></div>
 							</div>
@@ -66,29 +68,26 @@
 				<div class="col s4 center-align year grey">2</div>
 				<div class="col s4 center-align year grey">3</div>
 			</div>
-		</div>
+		</div> -->
 		<div class="row">
-			<div class="col s4 center-align" style="margin: 1% 0;"><a class="waves-effect waves-light btn grey">Priority 2</a></div>
+			{% for Priorities in Priority_Areas_Object %}
+			<div class="col s4 center-align" style="margin: 1% 0;"><a class="waves-effect waves-light btn grey">{{Priorities.priority_area}}</a></div>
 			<div class="col s4 center-align">
 				<ul class="collapsible popout" data-collapsible="accordion">
+					{% for Strategies in Strategy_Object %}	
 				    <li>
-				      	<div class="collapsible-header grey white">STRATEGY</div>
-				      	<div class="collapsible-body"><p class="pad-1">Strategy 1</p>
+				      	<div class="collapsible-header grey white on1">{{Strategies.strategy_name}}</div>
+				      		
+				      	{% for Project in Project_Object %}
+				      	<div class="collapsible-body"><p class="pad-1" id="p-pad">{{Project.project_name }}</p>
 				      		<div class="progress">
 							      <div class="determinate" style="width: 70%"></div>
 							</div>
 						</div>
-				      	<div class="collapsible-body"><p class="pad-1">Strategy 2</p>
-				      		<div class="progress">
-							      <div class="determinate red" style="width: 20%"></div>
-							</div>
-				      	</div>
-				      	<div class="collapsible-body"><p class="pad-1">Strategy 3</p>
-				      		<div class="progress">
-							      <div class="determinate yellow" style="width: 50%"></div>
-							</div>
-				      	</div>
+				      	{% endfor %}
+				      	
 				    </li>
+				    {% endfor %}
 				</ul>
 			</div>
 			<div class="col s4 center-align">
@@ -96,6 +95,7 @@
 				<div class="col s4 center-align year grey">2</div>
 				<div class="col s4 center-align year grey">3</div>
 			</div>
+			{% endfor %}
 		</div>
 
 	</div>

@@ -48,11 +48,18 @@
         </thead>
 
         <tbody>
+           {% for AIP_Details in AIP %}
           <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
+           
+            <td>{{AIP_Details.priority_area}}</td>
+            <td>{{AIP_Details.strategy_name}}</td>
+            <td>{{AIP_Details.project_name}}</td>
+            <td>{{AIP_Details.resources}}</td>
+            <td>{{AIP_Details.person_responsible}}</td>
+            <td>{{AIP_Details.status}}</td>
+        
           </tr>
+              {% endfor %}
         </tbody>
     </table>
 
