@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/static/bootstrap.js"></script>
+<script src="/static/bootstrap_jquery.js"></script>
+<link rel="stylesheet" href="/static/bootstrap.css">
+<title>ATMA - An accelerator for education NGO's</title>
+<script src="colorbox.js"></script>
+<link rel="stylesheet" href="/static/colorbox.css"/>
+<style type="text/css">
+
+.container{
+	margin-top: 10%;
+}
+
+.page-header{
+	margin: 2%;
+	font-weight: bold;
+
+}
+
+.progress{
+	
+	margin-top: 5%;
+}
+
+.profile{
+	position:fixed;
+	right: 2%;
+	width:150px;
+	height: 150px;
+	top: 1%;
+}
+.work{
+	margin-right: 2%;
+	width:250px;
+	height: 250px; 
+	margin-top:-9%;
+}
+
+.row{
+	margin-left: 7%;
+	margin-bottom: 5%;
+}
+.reward{
+	height: 40px;
+	width: 40px;
+
+}
+
+label{
+	display: inline-block;
+	width: 300px;
+	font-size: 20px;
+}
+.ngo-names{
+	text-decoration: underline;
+	font-weight: bold;
+	
+}
+
+.well{
+	margin-left:10%;
+	margin-right: 10%;
+	height: 15%;
+	margin-left:2%;
+
+}
+
+</style>
+
+
+<script type="text/javascript">
+$(document).ready(function()
+{
+$(".iframe1").colorbox({iframe:true, width:"82%", height:"85%"});
+});
+
+</script>
+
+</head>
+<body>
+
+<div class="page-header"> <h2> Name of volunteer </h2>
+<img src ="/media/animated-man.png" class=" img-responsove img-circle profile">
+</div>
+
+<div class="container">
+<div class="row"> 	
+<a href="#first"><img src="/media/VOLNGO1.png" class="work"></a>
+<a href="#second"><img src="/media/VOLNGO2.png" class="work"></a>
+<a href="#third"><img src="/media/VOLNGO3.png" class="work"></a>
+
+</div>
+
+<div class="well" id="first">
+<center><label class="ngo-names">NGO1</label><br><br></center>
+<label >Project name:</label><br><br>
+<label >Milestones Earned:</label><br><br>
+<label >Starting Date :</label><br><br>
+<label >Deadline :</label><br><br>
+<div class="progress">
+	
+    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+      <span>70% Complete</span>
+    </div>
+  </div>
+  <br>
+<a href="stat1.html" class="btn btn-primary btn-lg iframe1" >STATISTICS</a>
+
+</div>
+
+<div class="well" id="second">
+<center><label class="ngo-names">NGO2</label><br><br></center>
+<label >Project name:</label><br><br>
+<label >Milestones Earned:</label><br><br>
+<label >Starting Date :</label><br><br>
+<label >Deadline :</label><br><br>
+<center>
+<img src="/media/reward.jpg" class="reward"><img src="/media/reward.jpg" class="reward"><img src="/media/reward.jpg" class="reward">
+</center>
+
+<a href="stat2.html" class="btn btn-primary btn-lg iframe1" >STATISTICS</a>
+</div>
+
+<div class="well" id="third">
+<center><label class="ngo-names">NGO3</label><br><br></center>
+<label >Project name:</label><br><br>
+<label >Milestones Earned:</label><br><br>
+<label >Starting Date :</label><br><br>
+<label >Deadline :</label><br><br>
+<center>
+
+<img src="/media/reward.jpg" class="reward"><img src="/media/reward.jpg" class="reward"><img src="/media/reward.jpg" class="reward"><img src="/media/reward.jpg" class="reward">
+</center>
+
+
+<a href="stat3.html" class="btn btn-primary btn-lg iframe1" >STATISTICS</a>
+
+</div>
+
+</body>
+
+</html>
