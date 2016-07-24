@@ -4,38 +4,40 @@
     <!-- Latest compiled and minified CSS -->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="../static/materialize/css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../../static/materialize/css/materialize.min.css"  media="screen,projection"/>
 
-    <link type="text/css" rel="stylesheet" href="../static/atma.css" />
+    <link type="text/css" rel="stylesheet" href="../../static/atma.css" />
         <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
       <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="../static/materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../static/materialize/js/materialize.min.js"></script>
     <script src="../../static/sheets.js"></script>
+ <style>
+
+.page-header{
+  color: black;
+  text-decoration: underline;
+}
+
+ </style>
+
   </head>
   <body>
-    <!-- include header.html -->
-      <nav class="blue-black darken-4">
-          <div class="nav-wrapper wd75 margin-center">
-          <a href="./" class="brand-logo green-text light-1"></a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a href="index.php" class="green-text light-1 hover-white">Home</a></li>
-              <li><a href="#" class="green-text light-1 hover-white">About</a></li>
-              <li><a href="editor.php" class="green-text light-1 hover-white">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-    <!---->   
+   <center> <img src="/media/logo.png"  alt=" " style="height=20px; margin-top:5%;" ><br><br></center>
   <div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;">
     <a class="btn-floating btn-large red" href="#" id="xx">
+     
       <i class="large material-icons">play_for_work</i>
+    
     </a>
+
+    <br><br>
   </div>
   <div class="container push-down">
     <div class="row">
-      <h4>Annual Implementation Plan</h4>
+      <h4 class="page-header">Annual Implementation Plan</h4>
     </div>
     <table id="AIPSpreadsheet">
         <thead> 
@@ -43,10 +45,10 @@
               <th data-field="id">Priority</th>
               <th data-field="id">Strategy</th>
               <th data-field="id">Project</th>
-              <th data-field="id">Quarter 1</th>
-              <th data-field="id">Quarter 2</th>
-              <th data-field="id">Quarter 3</th>
-              <th data-field="id">Quarter 4</th>
+            <th data-field="id"> <a href="/Quarter_Details/1/"> Quarter 1</a></th>
+               <th data-field="id"><a href="/Quarter_Details/2/">Quarter 2</a></th>
+               <th data-field="id"><a href="/Quarter_Details/3/">Quarter 3</a></th>
+               <th data-field="id"><a href="/Quarter_Details/4/">Quarter 4</a></th>
               <th data-field="id">Resources</th>
               <th data-field="id">Person Responsible</th>
               <th data-field="id">Project Status</th> 
@@ -54,11 +56,12 @@
         </thead>
 
         <tbody>
+
            {% for AIP_Details in AIP %}
           <tr>
            
             <td>{{AIP_Details.priority_area}}</td>
-            <td>{{AIP_Details.strategy_name}}</td>
+            <td>{{AIP_Details.strategy}}</td>
             <td>{{AIP_Details.project_name}}</td>
             <td>{{AIP_Details.quarters.0}}</td>
             <td>{{AIP_Details.quarters.1}}</td>
@@ -69,6 +72,7 @@
             <td>{{AIP_Details.status}}</td>
           </tr>
               {% endfor %}
+
         </tbody>
     </table>
 

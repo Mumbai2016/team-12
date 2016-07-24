@@ -12,11 +12,11 @@ STATUSES = (
 )
 
 PRIORITY_AREAS = (
-    ('PR', 'Program'),
-    ('IM', 'Impact'),
-    ('EX', 'External recognition'),
-    ('FU', 'Funding'),
-    ('TA', 'Talent')
+    ('Program', 'Program'),
+    ('Impact', 'Impact'),
+    ('External recognition', 'External recognition'),
+    ('Funding', 'Funding'),
+    ('Talent', 'Talent')
 )
 
 
@@ -37,7 +37,7 @@ class NGO(models.Model):
     partnership_manager = models.ForeignKey(User,
                                             related_name='managers')
     resources = models.TextField()
-    status = models.CharField(max_length=2, choices=STATUSES)
+    status = models.CharField(max_length=20, choices=STATUSES)
 
 class Priority_Areas(models.Model):
     NGO_name=models.TextField()
@@ -75,7 +75,7 @@ class Project(models.Model):
     quarter = models.IntegerField()
     date_created = models.DateField(auto_now_add=True)
     deadline = models.DateField()
-    status = models.CharField(max_length=2, choices=STATUSES)
+    status = models.CharField(max_length=20, choices=STATUSES)
     assignee = models.OneToOneField(User, related_name='assignee')
     resources = models.TextField()
 
@@ -92,7 +92,7 @@ class Task(models.Model):
     project = models.ForeignKey(Project)
     date_created = models.DateField(auto_now_add=True)
     deadline = models.DateField()
-    status = models.CharField(max_length=2, choices=STATUSES)
+    status = models.CharField(max_length=20, choices=STATUSES)
 
 
 class Badges(models.Model):

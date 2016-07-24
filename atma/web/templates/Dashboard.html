@@ -21,8 +21,7 @@
 
   <center> <img src="/media/logo.png"  alt=" " style="height=20px" > </center>
 
-  <center> <img src="logo.png"  alt=" " style="height=20px" > </center>
-
+ 
  </div>	
 	<div class="container push-down">
 		<div class="row">
@@ -70,8 +69,9 @@
 				<div class="col s4 center-align year grey">3</div>
 			</div>
 		</div> -->
-		<div class="row">
+		
 			{% for Priorities in Priority_Areas_Object %}
+			<div class="row">
 			<div class="col s4 center-align" style="margin: 1% 0;"><a class="waves-effect waves-light btn grey">{{Priorities.priority_area}}</a></div>
 			<div class="col s4 center-align">
 				<ul class="collapsible popout" data-collapsible="accordion">
@@ -82,8 +82,9 @@
 				      		
 				      	{% for Project in Project_Object %}
 				      	<div class="collapsible-body"><p class="pad-1" id="p-pad">{{Project.project_name }}</p>
-
-				      	<div class="collapsible-header grey white">STRATEGY</div>
+				      	<div class="progress">
+							      <div class="determinate green" style="width: 70%"></div>
+							</div>
 				      	<div class="collapsible-body"><p class="pad-1">Project 1</p>
 
 				      		<div class="progress">
@@ -114,9 +115,11 @@
 				<div class="col s4 center-align year grey">2</div>
 				<div class="col s4 center-align year grey">3</div>
 			</div>
+			</div>
+			
 			{% endfor %}
 		</div>
-
-	</div>
+		
+	
 	</body>
 </html>

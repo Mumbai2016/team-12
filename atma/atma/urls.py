@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from web.views import AIP,QP,Dashboard,login,index
+from web.views import AIP,Quarter_Details,Dashboard,login,index,volunteer,ngo_survey,find_locator
 from django.conf.urls.static import static
 
 from . import settings
@@ -23,8 +23,13 @@ from . import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^Dashboard/(?P<NGO_selected>[a-zA-z&.0-9 ]+)/$', Dashboard),
-    url(r'^login/(?P<year_selected>[0-9 ]+)/$', AIP),
+    url(r'^login/(?P<year_selected>[0-9]+)/$', AIP),
+    url(r'^Quarter_Details/(?P<quar>[0-9]+)/$', Quarter_Details),
     url(r'^index/', index),
+    url(r'^login/', login),
+    url(r'^volunteer/', volunteer),
     url(r'^AIP/(?P<year>[0-9])/$',AIP),	
-    url(r'^QP/',QP)
+    url(r'^ngo_survey/', ngo_survey),
+    url(r'^find_locator/', find_locator),
+   
  ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

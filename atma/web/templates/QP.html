@@ -4,64 +4,55 @@
     <!-- Latest compiled and minified CSS -->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="../static/materialize/css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../../static/materialize/css/materialize.min.css"  media="screen,projection"/>
 
-    <link type="text/css" rel="stylesheet" href="../static/atma.css" />
+    <link type="text/css" rel="stylesheet" href="../../static/atma.css" />
         <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
       <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="../static/materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../static/materialize/js/materialize.min.js"></script>
     <script src="../../static/sheets.js"></script>
   </head>
   <body>
-    <!-- include header.html -->
-      <nav class="blue-black darken-4">
-          <div class="nav-wrapper wd75 margin-center">
-          <a href="./" class="brand-logo green-text light-1"></a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a href="index.php" class="green-text light-1 hover-white">Home</a></li>
-              <li><a href="#" class="green-text light-1 hover-white">About</a></li>
-              <li><a href="editor.php" class="green-text light-1 hover-white">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-    <!---->   
-    <div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;">
-      <a class="btn-floating btn-large red" href="#" id="xxyy">
-        <i class="large material-icons">play_for_work</i>
-      </a>
-    </div>
+   <center> <img src="/media/logo.png"  alt=" " style="height=20px; margin-top:5%;" ><br><br></center>
+  <div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large red" href="#" id="xx">
+     
+      <i class="large material-icons">play_for_work</i>
+    
+    </a>
+
+    <br><br>
+  </div>
+
+  
   <div class="container push-down">
     <div class="row">
-      <h4>Quarterly Plan</h4>
+      <h4><u>Quarterly Plan</u></h4>
     </div>
     <table id="QPSpreadsheet">
         <thead>
           <tr>
               <th data-field="id">Organisation</th>
-              <th data-field="id">PM</th>
               <th data-field="id">Project</th>
               <th data-field="id">Start Date</th>
               <th data-field="id">Completion Date</th>
-              <th data-field="id">Volunteer Required</th>
-              <th data-field="id">Volunteer Name</th>
               <th data-field="id">Project Status</th>
           </tr>
         </thead>
 
         <tbody  id="tbodyid">
+          {% for NGO_Details in NGO%}
           <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
+            <td>{{NGO_Details.NGO_name}}</td>
+            <td>{{NGO_Details.project_name}}</td>
+            <td>{{NGO_Details.date_created}}</td>
+            <td>{{NGO_Details.deadline}}</td>
+            <td>{{NGO_Details.status}}</td>
           </tr>
+          {% endfor %}
         </tbody>
     </table>
 </div>
