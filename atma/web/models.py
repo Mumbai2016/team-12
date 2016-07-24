@@ -47,12 +47,10 @@ class Priority_Areas(models.Model):
 class Strategy(models.Model):
 
     NGO_name=models.TextField()
-    priority_name=models.TextField()
+    priority_area=models.TextField()
     strategy_name=models.TextField()
-    description = models.TextField()
-    ngo = models.ForeignKey(NGO)
     year = models.IntegerField()
-    status = models.CharField(max_length=2, choices=STATUSES)
+    status = models.CharField(max_length=20, choices=STATUSES)
 
     date_created = models.DateField(auto_now_add=True)
     deadline = models.DateField(auto_now_add=True)
@@ -71,8 +69,8 @@ class Strategy(models.Model):
 
 class Project(models.Model):
     NGO_name=models.TextField()
-    description = models.TextField()
-    strategy = models.ForeignKey(Strategy)
+    project_name = models.TextField()
+    strategy = models.TextField()
     quarter = models.IntegerField()
     date_created = models.DateField(auto_now_add=True)
     deadline = models.DateField()
